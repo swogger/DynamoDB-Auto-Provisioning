@@ -1,0 +1,20 @@
+/*
+** Create new IAM role and paste the custom policy.
+** Assign this role to your Lambda function
+*/
+
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Action": [
+        "dynamodb:DescribeTable",
+        "dynamodb:UpdateTable",
+        "CloudWatch:getMetricStatistics"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    }
+  ]
+}
